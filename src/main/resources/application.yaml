@@ -1,1 +1,13 @@
+server:
+  port: 8761
+# By default eureka server will run on 8761. But we are defining specifically.
+
+
+#Eureka server configuration
+eureka:
+  instance:
+    hostname: localhost # we are going to run eureka server on localhost
+  client:
+    register-with-eureka: false #WE dont want this application(service-registry to register with itself as it is a server not a client
+    fetch-registry: false # This will tell that this is a server and other clients can come and register with this. So we are setting it to false so that it will not register itself
 
